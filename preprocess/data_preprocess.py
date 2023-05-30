@@ -6,8 +6,8 @@ from curtsies.fmtfuncs import red
 
 def remove_comments(string):
     """Remove comments from a given string"""
-    string = re.sub(re.compile("'''.*?'''", re.DOTALL), "", string)
-    string = re.sub(re.compile('""".*?"""', re.DOTALL), "", string)
+    string = re.sub(re.compile("\'\'\'.*?\'\'\'", re.DOTALL), "", string)
+    string = re.sub(re.compile("\"\"\".*?\"\"\"", re.DOTALL), "", string)
     string = re.sub(re.compile("#.*?\n"), "", string)
 
     return string
@@ -25,6 +25,7 @@ def get_file_paths(root_dir):
         for file_name in file_names:
             file_path = os.path.join(dir_path, file_name)
             file_paths.append(file_path)
+
     return file_paths
 
 
