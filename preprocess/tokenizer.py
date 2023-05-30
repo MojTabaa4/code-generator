@@ -3,8 +3,8 @@ from tokenizers import ByteLevelBPETokenizer
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 TRAIN_BASE = False
-TOKENIZER_DIR = "tokenizer"
-DATA_FILE_PATHS = ["data.txt"]
+TOKENIZER_DIR = "../tokenizer"
+DATA_FILE_PATHS = ["../data.txt"]
 VOCAB_SIZE = 52000
 MIN_FREQ = 2
 SPECIAL_TOKENS = {
